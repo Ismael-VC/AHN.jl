@@ -1,4 +1,4 @@
-abstract AtomicUnit
+abstract AtomicUnit{T}
 
 atoms = [
     #     Name   Symbol  Valence
@@ -8,7 +8,7 @@ atoms = [
 
 for (atom, sym, valence) in atoms
     @eval begin
-        type $atom{T<:Number} <: AtomicUnit
+        type $atom{T<:Number} <: AtomicUnit{T}
             value::Complex{T}    # atomic value
             valence::Int         # number of valence electrons
             degree::Int          # number of shared valence electons
