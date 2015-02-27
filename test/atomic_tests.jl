@@ -32,7 +32,7 @@ nums_data = [
     (BigInt(n), BigInt),
     (BigFloat(n), BigFloat),
     (n//n, Rational{Int}),
-    # (n//n + n//big(n)*im, Rational{BigInt}),    # https://github.com/JuliaLang/julia/issues/10311
+    (n//n + n//big(n)*im, Rational{BigInt}),
     (n+n*im, Int),
     (Inf*im, Float64)
 ]
